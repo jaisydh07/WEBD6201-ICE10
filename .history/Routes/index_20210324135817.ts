@@ -1,10 +1,5 @@
-// Express Configuration
 import express = require('express');
 const router = express.Router();
-
-// Contact Model
-import ContactModel = require("../Models/contact");
-const Contact = ContactModel.Model; // Contact Alias
 
 /* GET home page - with / */
 router.get('/', function(req, res, next) 
@@ -65,16 +60,7 @@ router.get('/register', function(req, res, next)
 /* GET register page - with /register */
 router.get('/contact-list', function(req, res, next) 
 {
-    //res.render('index', { title: 'Contact List', page: 'contact-list', displayName: 'temp'  });
-
-    Contact.find(function(err, contacts){
-      if(err)
-      {
-        return console.error(err);
-      }
-      res.json(contacts);
-    });
-
+    res.render('index', { title: 'Contact List', page: 'contact-list', displayName: 'temp'  });
 });
 
 /* GET login page - with /login */
