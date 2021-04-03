@@ -82,3 +82,6 @@ router.get('/logout', function(req, res, next)
   res.render('index', { title: 'Logout', page: 'logout', displayName: ''    });
 });
 
+
+
+//module.exports = router;
